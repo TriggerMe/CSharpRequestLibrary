@@ -9,7 +9,7 @@ namespace TriggerMe.Test
         [Fact]
         public void EndpointIsValid()
         {
-            Assert.Equal("https://run.triggerme.io/f", Constants.DefaultEndpoint);
+            Assert.Equal("https://run.triggerme.io", Options.Endpoint);
         }
     }
 }
