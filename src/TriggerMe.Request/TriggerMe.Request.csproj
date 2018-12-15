@@ -4,9 +4,17 @@
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <PackageId>TriggerMe.Request</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.0-alpha</Version>
     <Authors>James Woodall</Authors>
     <Company>TriggerMe</Company>
+    <Description>TriggerMe Request Library</Description>
+
+    <PackageProjectUrl>https://www.triggerme.io</PackageProjectUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/TriggerMe/CSharpRequestLibrary</RepositoryUrl>
+    <PackageIconUrl></PackageIconUrl>
+
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
