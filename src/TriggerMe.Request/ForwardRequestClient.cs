@@ -59,6 +59,9 @@ namespace TriggerMe.Request
 
                 requestMessage.Method = HttpMethod.Post;
 
+                if (httpContent != null)
+                    requestMessage.Content = httpContent;
+
                 if (extraHeaders != null)
                 {
                     foreach (var header in extraHeaders)
