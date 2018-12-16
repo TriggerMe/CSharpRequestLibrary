@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <PackageId>TriggerMe.Request</PackageId>
-    <Version>1.0.0-alpha</Version>
+    <Version>1.0.1-alpha</Version>
     <Authors>James Woodall</Authors>
     <Company>TriggerMe</Company>
     <Description>TriggerMe Request Library</Description>
