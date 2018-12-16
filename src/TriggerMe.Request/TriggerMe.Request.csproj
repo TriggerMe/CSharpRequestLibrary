@@ -1,6 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <GenerateFullPaths>true</GenerateFullPaths>
+
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <PackageId>TriggerMe.Request</PackageId>

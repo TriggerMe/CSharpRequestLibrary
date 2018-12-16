@@ -6,19 +6,38 @@ using TriggerMe.Request.Models;
 
 namespace TriggerMe.Request
 {
+    /// <summary>
+    /// Helper class to check TriggerMe for the status of a Forwarding request
+    /// </summary>
     public class ForwardRequestStatus
     {
         static HttpClient _httpClient = new HttpClient();
 
-        static string LogEndpoint => Options.Endpoint + "/l";
+        /// <summary>
+        /// Endpoint to check status.
+        /// For on-premise installations, override <see cref="Options.Endpoint" />
+        /// </summary>
+        public static string LogEndpoint => Options.Endpoint + "/l";
 
+        /// <summary>
+        /// Creates a new ForwardRequestStatus object
+        /// </summary>
         public ForwardRequestStatus()
         {
-
+            // Ignore
         }
 
+        /// <summary>
+        /// Checks the status of a request
+        /// </summary>
+        /// <param name="requestId">Request Id to check</param>
+        /// <exception cref="System.ArgumentNullException">Thrown if <paramref name="requestId" /> is null</exception>
+        /// <returns>A valid RequestLog if successful</returns>
         public async Task<RequestLog> CheckRequestAsync(string requestId)
         {
+            if (string.IsNullOrEmpty(requestId))
+                throw new ArgumentNullException(nameof(requestId));
+
             using (var request = new HttpRequestMessage())
             {
                 request.Method = HttpMethod.Get;
