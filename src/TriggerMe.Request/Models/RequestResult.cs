@@ -1,23 +1,26 @@
 namespace TriggerMe.Request.Models
 {
+    /// <summary>
+    /// Defines the current status of a TriggerMe request
+    /// </summary>
     public enum RequestResult
     {
-        // Request has started but not begun processing
+        /// <summary>Request has started but not begun processing</summary>
         Started,
 
-        // Request is queued up for Daemon operation
+        /// <summary>Request is queued up for Daemon operation</summary>
         WaitingForDaemon, 
 
-        // Request is successful
+        /// <summary>Request is successful</summary>
         Successful, 
 
-        // Request failed and is retrying
+        /// <summary>Request failed and is retrying</summary>
         Retrying, 
 
-        // Request has failed
+        /// <summary>Request has failed</summary>
         Failed,
 
-        // Request has been cancelled
+        /// <summary>Request has been cancelled</summary>
         Cancelled
     }    
 }

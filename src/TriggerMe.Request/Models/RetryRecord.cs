@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace TriggerMe.Request.Models
 {
+    /// <summary>
+    /// Defines a TriggerMe Request Attempt
+    /// </summary>
     public class RetryRecord : IBodyBlob
     {
         /// <summary>

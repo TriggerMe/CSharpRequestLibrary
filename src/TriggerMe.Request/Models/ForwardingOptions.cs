@@ -1,5 +1,8 @@
 namespace TriggerMe.Request.Models
 {
+    /// <summary>
+    /// The forwarding options used by a TriggerMe request
+    /// </summary>
     public class ForwardingOptions
     {
         /// <summary>

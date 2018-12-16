@@ -32,11 +32,15 @@ namespace TriggerMe.Request
         /// </summary>
         /// <param name="requestId">Request Id to check</param>
         /// <exception cref="System.ArgumentNullException">Thrown if <paramref name="requestId" /> is null</exception>
+        /// <exception cref="ForwardRequestException">Thrown if the Request fails</exception>
         /// <returns>A valid RequestLog if successful</returns>
         public async Task<RequestLog> CheckRequestAsync(string requestId)
         {
             if (string.IsNullOrEmpty(requestId))
                 throw new ArgumentNullException(nameof(requestId));
+
+            if (string.IsNullOrEmpty(Options.ApiKey))
+                throw new ForwardRequestException("Missing API Key");
 
             using (var request = new HttpRequestMessage())
             {

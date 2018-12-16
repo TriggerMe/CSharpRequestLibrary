@@ -2,6 +2,9 @@ using System.Collections.Generic;
 
 namespace TriggerMe.Request.Models
 {
+    /// <summary>
+    /// Represents the Request Data that is sent for a TriggerMe Request
+    /// </summary>
     public class RequestData : IBodyBlob
     {
         /// <summary>

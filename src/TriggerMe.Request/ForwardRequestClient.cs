@@ -97,11 +97,15 @@ namespace TriggerMe.Request
         /// <param name="method">Http Method to use</param>
         /// <param name="httpContent">Content to send to the URL (can be null)</param>
         /// <param name="options">Extra options to use (can be null)</param>
+        /// <exception cref="ForwardRequestException">Thrown if the Request fails</exception>
         /// <returns>Return object containing the RequestId</returns>
         public async Task<ForwardResponse> SendAsync(string url, HttpMethod method, Dictionary<string, string> extraHeaders, HttpContent httpContent, ForwardRequestOptions options)
         {
             if (string.IsNullOrEmpty(url))
                 throw new ArgumentNullException(nameof(url));
+
+            if (string.IsNullOrEmpty(Options.ApiKey))
+                throw new ForwardRequestException("Missing API Key");
 
             if (options == null)
                 options = new ForwardRequestOptions();

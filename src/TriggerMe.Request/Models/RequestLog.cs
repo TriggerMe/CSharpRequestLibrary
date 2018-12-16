@@ -2,6 +2,9 @@ using System;
 
 namespace TriggerMe.Request.Models
 {
+    /// <summary>
+    /// Represents a request that is being processed by TriggerMe
+    /// </summary>
     public class RequestLog
     {
         /// <summary>

@@ -1,6 +1,6 @@
 namespace TriggerMe.Request.Models
 {
-    public class RequestError
+    internal class RequestError
     {
         public string Message { get; set; }
     }
